@@ -23,9 +23,16 @@ class Table
         return $this;
     }
 
+    private static function stripAnsiSequences(string $str)
+    {
+        return ($str === null)
+            ? null
+            : preg_replace('#\\x1b[[][^A-Za-z]*[A-Za-z]#', '', $str);
+    }
+
     private static function width(string $str): int
     {
-        return strlen(AnsiSeq::strip($str));
+        return strlen(self::stripAnsiSequences($str));
     }
 
     private static function pad(string $str, int $width, $align = self::DEFAULT_ALIGN): string
