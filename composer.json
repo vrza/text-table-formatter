@@ -1,0 +1,15 @@
+{
+    "name": "vrza/text-table-formatter",
+    "description": "PHP library for formatting plain text tables",
+    "type": "library",
+    "keywords": ["php", "formatting", "text", "table", "terminal"],
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "TextTableFormatter\\": "src/"
+        }
+    }
+}
