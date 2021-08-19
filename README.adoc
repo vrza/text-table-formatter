@@ -1,0 +1,3 @@
+= Text Table Formatter
+
+Text Table Formatter is a PHP library for formatting plain text tables
